@@ -1,0 +1,16 @@
+def listing(num):
+    a=[]
+    n = 0
+    while n < len(num):
+        c = 1
+        while n+1 < len(num) and num[n]==num[n+1]:
+            n += 1 
+            c += 1 
+        a.append(str(c)+num[n])
+        n += 1 
+    return ''.join(a)
+b=1
+m=int(input())
+for n in range(m):
+    print(b)
+    b=listing(str(b))
